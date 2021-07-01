@@ -1,0 +1,91 @@
+.card{
+  background-color: #fff;
+  color: rgb(126, 126, 126);
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 2px 5px 1.5rem rgba(10, 10, 10, 0.527);
+  width: 100%;
+  text-align: center;
+}
+
+.card .btn {
+  border: none;
+  padding: 1rem;
+  background-color: rgb(255, 153, 0);
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.card-item {
+    padding: .7rem 1.5rem;
+  }
+
+.card-item:first-child {
+    background-color: rgb(255, 153, 0);
+  }
+
+.card .card-item:nth-child(2) img {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 2px 5px 1rem rgba(68, 68, 68, 0.527);
+}
+
+.card-item:nth-child(3) {
+  padding: 1rem 0;
+}
+
+
+.card .btn:hover {
+  box-shadow: 2px 5px .5rem rgba(10, 10, 10, 0.363);
+}
+
+.card .btn:active {
+  background-color: rgba(255, 153, 0, 0.774);
+}
+
+@media (min-width: 574px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr 1fr 3fr;
+    gap: 1rem;
+    width: 80%;
+    text-align: justify;
+  }
+
+  .card-item:first-child {
+    grid-row: 1 / span 4;
+    background-color: rgb(255, 153, 0);
+  }
+
+  .card-item:nth-child(2) {
+    position: relative;
+    grid-row: 1 / span 4;
+  }
+
+  .card-item:nth-child(3) {
+    grid-row: 1 / span 3;
+  }
+
+  .card-item:last-child {
+    justify-self: center;
+  }
+
+  .card .card-item:nth-child(2) img {
+    position: absolute;
+    left: -100px;
+    box-shadow: 2px 5px 1rem rgba(68, 68, 68, 0.527);
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    width: 60%;
+  }
+}
